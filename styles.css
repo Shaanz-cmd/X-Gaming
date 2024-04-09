@@ -1,0 +1,341 @@
+/* Root variables */
+:root {
+  --primary-color: rgb(21, 94, 184);
+  --secondary-color: rgb(238, 98, 107);
+  --card-background: #e8e0e0;
+  --text-color: rgba(41, 37, 37, 0.944);
+}
+/* Text selection  */
+::selection {
+  color: rgb(154, 229, 5);
+}
+/* Scroll bar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(238, 98, 107, 0.7);
+  border-radius: 20px;
+  height: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b69d9d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+body {
+  background-color: white;
+}
+.main_body {
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+/* ===   NAVBAR CODE  === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 80px;
+  color: white;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid white;
+}
+.ham_menu {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.ham_menu:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.ham_menu span {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ham_menu span:nth-child(2) {
+  width: 120%;
+  top: 13px;
+}
+.ham_menu span:nth-child(3) {
+  top: 100%;
+}
+.navbar_links {
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: absolute;
+  bottom: -280px;
+  left: 50px;
+  border-top: none;
+  display: none;
+  transition: transform 1.6s ease-in-out;
+  transform: translateY(100%);
+  box-shadow: 2px 2px 6px black, -2px 2px 6px black;
+}
+.navbar_links>a {
+  padding-top: 10px;
+}
+/* GPT Code */
+.navbar_links.visible {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  transition-duration: 1s;
+}
+/*  */
+.navbar_links>* {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 25px;
+  border-bottom: 0.1px solid black;
+  text-decoration: none;
+  color: black;
+  font: bolder;
+  padding-bottom: 5px;
+}
+.navbar_links a:hover {
+  color: var(--secondary-color);
+}
+.signIn {
+  margin: 0;
+  border-bottom: none;
+}
+/* ===== Hero section ===== */
+.hero_section {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--primary-color);
+}
+.text_container {
+  color: white;
+  font: 900;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.texts {
+  height: 80%;
+  padding-top: 120px;
+}
+.texts>h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+.texts>p {
+  line-height: 30px;
+}
+.search_container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+}
+.search_btn {
+  width: 30%;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: x-large;
+  position: absolute;
+  transform: translateX(-100%);
+  cursor: pointer;
+}
+#search_bar {
+  width: 100%;
+  height: 60px;
+  border-radius: 30px;
+  padding-left: 15px;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+button:hover {
+  opacity: 0.9;
+}
+.game_card {
+  width: 100%;
+  height: 75dvh;
+  overflow: visible;
+  position: relative;
+}
+.game_img {
+  background: var(--primary-color);
+  width: 90%;
+  height: 500px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.game_card span {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: x-large;
+  position: absolute;
+}
+.price {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: 3;
+  top: 5%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.discount {
+  width: 80px;
+  height: 80px;
+  bottom: 5%;
+  left: 10%;
+  background-color: rgb(201, 20, 20);
+}
+.services_cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  background-color: transparent;
+}
+.card {
+  box-shadow: 2px 2px 6px black;
+  border-radius: 10px;
+  height: 200px;
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.card img {
+  width: 50px;
+}
+.img_container {
+  background-color: var(--primary-color);
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.card:hover .img_container{
+  background-color: var(--secondary-color);
+  transition: background-color 0.3s ease-in-out;
+}
+.trending_page {
+  width: 100dvw;
+  height: auto;
+}
+.tag {
+  color: var(--secondary-color);
+  font-weight: bolder;
+  margin: 15px 0 0 15px;
+}
+.trending_text {
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 20px 0 0 15px;
+  color: var(--text-color);
+}
+.game_cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+.game {
+  width: 90%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--card-background);
+  padding: 0;
+  border-radius: 25px;
+  cursor: pointer;
+ }
+.game:hover .text_decs h3{
+  color: var(--primary-color);
+  transition: color 0.4s ease-in;
+}
+.game:hover .prices{
+  background-color: var(--primary-color);
+  transition: background-color 0.4s ease-in;
+}
+.game img{
+  width: 100%;
+  border-radius: 25px;
+}
+.bottom_tag {
+  width: 100%;
+  padding:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prices {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.text_decs h3{ 
+   color: var(--text-color);
+}
+.text_decs h4 {
+  color: var(--secondary-color);
+}
