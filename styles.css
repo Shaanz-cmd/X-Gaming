@@ -202,7 +202,7 @@ body {
   cursor: pointer;
 }
 
-#search_bar {
+input {
   width: 100%;
   height: 60px;
   border-radius: 30px;
@@ -340,12 +340,10 @@ button:hover {
 .game {
   width: 90%;
   display: flex;
-  padding: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: var(--card-background);
-  padding: 0;
   border-radius: 25px;
   cursor: pointer;
 }
@@ -403,10 +401,12 @@ button:hover {
   background-color: var(--primary-color);
   transition: background-color 0.4s ease-in;
 }
+
 .categories {
   width: 100dvw;
   text-align: center;
 }
+
 .category {
   background-color: var(--primary-color);
   width: 90%;
@@ -416,13 +416,51 @@ button:hover {
   padding: 0;
   overflow: hidden;
 }
+
 .category img {
   width: 100%;
-  height: 100%;  
+  height: 100%;
   border-radius: 20px;
   margin-bottom: 0;
 }
+
 .sub_cat {
   margin: 22px 0;
   color: white;
+}
+
+.shop {
+  width: 90%;
+  padding: 25px;
+  background-color: var(--card-background);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.shop h3 {
+  color: var(--secondary-color);
+}
+
+.shop h4 {
+  margin: 50px 0;
+  color: var(--text-color);
+}
+
+.BTN {
+  width: auto;
+  height: auto;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 30px;
+  font-size: larger;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+strong {
+  color: var(--primary-color);
+}
+.email_input {
+  margin: 60px 0 25px 0;
 }
