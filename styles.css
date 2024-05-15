@@ -342,6 +342,7 @@ strong {
   text-align: center;
   color: white;
 }
+
 @media screen and (max-width: 780px) {
 
   .image_card {
@@ -641,6 +642,7 @@ strong {
     width: 420px;
     border-radius: 5px;
   }
+
   .shop {
     max-width: 350px;
   }
