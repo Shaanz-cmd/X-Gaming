@@ -646,4 +646,8 @@ strong {
   .shop {
     max-width: 350px;
   }
+
+  .signIn {
+    display: none;
+  }
 }
